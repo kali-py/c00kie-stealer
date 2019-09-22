@@ -1,7 +1,7 @@
 # c00kie-stealer
 
-Extracts cookies from well known browsers 
-🔪🍪🔪🍪
+🔪🍪 Extracts cookies from well known browsers 
+
 ## Installation
 
 Use the package manager [pip](https://pip.pypa.io/en/stable/) to install cookie-stealer.
