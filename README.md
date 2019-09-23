@@ -45,12 +45,6 @@ $ python3 CookieStealer
 
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
-## Version Control
-
-* c00kie-stealer v1.0.0
-
-First release of cookie stealer.
-
 ## License
 
 [GNU Lesser General Public License v2.1](https://www.gnu.org/licenses/old-licenses/lgpl-2.1.html)
