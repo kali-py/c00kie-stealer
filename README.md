@@ -1,6 +1,6 @@
 # c00kie-stealer
 
-:hocho::cookie: Extracts cookies from well known browsers 
+Extracts cookies from well known browsers 
 🔪🍪🔪🍪
 ## Installation
 
