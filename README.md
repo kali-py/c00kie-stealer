@@ -10,12 +10,21 @@ Use the package manager [pip](https://pip.pypa.io/en/stable/) to install cookie-
 pip3 install -r requirments.txt
 ```
 
+*NOTE: WINDOWS USERS REQUIRE [MS Visual Studio 2015](https://www.visualstudio.com/en-us/downloads/download-visual-studio-vs.aspx) (Community Edition) with C/C++ compilers, and may need to reinstall pycryptodome. For more info please visit [this link](https://pycryptodome.readthedocs.io/en/latest/src/installation.html#windows-from-sources-python-3-5-and-newer)*
+
+```bash
+pip3 install pycryptodomex --no-use-wheel
+```
+
 ## Usage
 
 This will save all the cookies in 'cookies.json' and will show logs files.
 
 ```bash
 $ python3 CookieStealer
+ 
+***   RUNNING 'CookieStealer.py'   ***
+
 [!]Getting chrome cookies...
     [+]Got chrome cookies without any exceptions!
 [!]Getting chrome firefox...
@@ -31,15 +40,16 @@ $ python3 CookieStealer
         [+]Safari browser cookie dict created!
     [!]Saving the duct in json file...
         [+]Cookie list saved to the 'cookies.json' file!
+
 ***  COOKIES ARE SAVED TO 'cookies.json' FILE    ***
 ***  EXITING PYTHON  ***
 ```
 
 ## Browser Support
 
-* **Chrome**
-* **Firefox**
-* **Safari**
+* ***Chrome***
+* ***Firefox***
+* ***Safari***
 
 ## Contributing
 
