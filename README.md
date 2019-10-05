@@ -18,7 +18,7 @@ pip3 install pycryptodomex --no-use-wheel
 
 ## Usage
 
-This will save all the cookies in 'cookies.json' and will show logs files.
+*Usage as a executable:* This will save all the cookies in 'cookies.json' and will show logs files.
 
 ```bash
 $ python3 CookieStealer
@@ -45,12 +45,35 @@ $ python3 CookieStealer
 ***  EXITING PYTHON  ***
 ```
 
+*Usage as a library:* This will use the browsercookie library to get cookiejar objects from the cookie from major browser.
+
+```python
+import lib_bc
+
+# Get Chrome browser cookies:
+ChromeCookieJar = lib_bc.chrome()
+
+# Get Firefox browser cookies:
+FirefoxCookieJar = lib_bc.firefox()
+
+# Get Safari browser cookies:
+SafariCookieJar = lib_bc.safari()
+
+''' more code... '''
+```
+
+
 ## Browser Support
 
 * ***Chrome***
 * ***Firefox***
 * ***Safari***
 
+## Acknowledgements
+
+* **bin0x00** - For initializing the this project.
+* **richardpenman** - For making the [browsercookie library](https://bitbucket.org/richardpenman/browsercookie)
+  * More acknowledgements at richardpenman repo
 ## Contributing
 
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
