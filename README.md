@@ -10,7 +10,7 @@ For ***Windows*** users use the file `win-installer.py` to install, make sure yo
 python3 win-installer
 ```
 
-For ***Linux*** and ***MacOS*** Users use the package manager [pip](https://pip.pypa.io/en/stable/) to install cookie-stealer.
+For ***Linux*** and ***MacOS*** Users use the package manager [pip](https://pip.pypa.io/en/stable/) to install the requirements.
 
 ```bash
 pip3 install -r requirments.txt
