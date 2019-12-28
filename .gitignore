@@ -1,0 +1,6 @@
+# Ignoreing the main cookies, in case....
+
+cookies.json
+
+.idea/
+__pycache__/*

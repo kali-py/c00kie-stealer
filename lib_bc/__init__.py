@@ -263,14 +263,23 @@ class Firefox(BrowserCookieLoader):
                                 print('Could not read file:', str(e))
                             except ValueError as e:
                                 print('Error parsing firefox session JSON:', str(e))
+                try:
+                    if 'json_data' in locals():
+                        expires = str(int(time.time()) + 3600 * 24 * 7)
+                        for window in json_data.get('windows', []):
+                            for cookie in window.get('cookies', []):
+                                yield create_cookie(cookie.get('host', ''), cookie.get('path', ''), False, expires, cookie.get('name', ''), cookie.get('value', ''))
+                    else:
+                        print('Could not find any Firefox session files')
+                except:
+                    if json_data:
+                        expires = str(int(time.time()) + 3600 * 24 * 7)
+                        for cookie in json_data.get('cookies', []):
+                            yield create_cookie(cookie.get('host', ''), cookie.get('path', ''), False, expires,
+                                            cookie.get('name', ''), cookie.get('value', ''))
+                    else:
+                        print('Could not find any Firefox session files')
 
-                if 'json_data' in locals():
-                    expires = str(int(time.time()) + 3600 * 24 * 7)
-                    for window in json_data.get('windows', []):
-                        for cookie in window.get('cookies', []):
-                            yield create_cookie(cookie.get('host', ''), cookie.get('path', ''), False, expires, cookie.get('name', ''), cookie.get('value', ''))
-                else:
-                    print('Could not find any Firefox session files')
 
 class Safari(BrowserCookieLoader):
     def __str__(self):
@@ -291,16 +300,16 @@ class Safari(BrowserCookieLoader):
 
         try:
             binary_file = open(FilePath, 'rb')
-        except IOError as e:
+        except IOError:
             BrowserCookieError('File Not Found :' + FilePath)
             exit()
 
-        file_header = binary_file.read(4)# will equal 'cook', which stands for cookies
+        binary_file.read(4)# will equal 'cook', which stands for cookies
 
         num_pages = unpack('>i', binary_file.read(4))[0]
 
         page_sizes = []
-        for np in range(num_pages):
+        for _ in range(num_pages):
             page_sizes.append(unpack('>i', binary_file.read(4))[0])
 
         pages = []
@@ -310,11 +319,10 @@ class Safari(BrowserCookieLoader):
         for page in pages:
             page = StringIO(page)
             page.read(4)
-            num_cookies = unpack('<i', page.read(4))[
-                0]
+            num_cookies = unpack('<i', page.read(4))[0]
 
             cookie_offsets = []
-            for nc in range(num_cookies):
+            for _ in range(num_cookies):
                 cookie_offsets.append(unpack('<i', page.read(4))[
                                           0])
 
