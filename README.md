@@ -4,17 +4,19 @@
 
 ## Installation
 
-Use the package manager [pip](https://pip.pypa.io/en/stable/) to install cookie-stealer.
+For ***Windows*** users use the file `win-installer.py` to install, make sure you have package manager [pip](https://pip.pypa.io/en/stable/) installed.
+
+```bash
+python3 win-installer
+```
+
+For ***Linux*** and ***MacOS*** Users use the package manager [pip](https://pip.pypa.io/en/stable/) to install cookie-stealer.
 
 ```bash
 pip3 install -r requirments.txt
 ```
 
-*NOTE: WINDOWS USERS REQUIRE [MS Visual Studio 2015](https://www.visualstudio.com/en-us/downloads/download-visual-studio-vs.aspx) (Community Edition) with C/C++ compilers, and may need to reinstall pycryptodome. For more info please visit [this link](https://pycryptodome.readthedocs.io/en/latest/src/installation.html#windows-from-sources-python-3-5-and-newer)*
-
-```bash
-pip3 install pycryptodomex --no-use-wheel
-```
+*Note for Windows users: If the file `win-installer.py` doesnt work then you will need to install [MS Visual Studio 2015](https://www.visualstudio.com/en-us/downloads/download-visual-studio-vs.aspx) (Community Edition) with C/C++ compilers, and then install requirements using pip with the following command:* `pip3 install -r requirments.txt`
 
 ## Usage
 
