@@ -2,6 +2,8 @@
 
 🔪🍪 Extracts cookies from well known browsers 
 
+***NOTE: THIS PROJECT MAY NOT WORK AS OF 2019***
+
 ## Installation
 
 For ***Windows*** users use the file `win-installer.py` to install, make sure you have package manager [pip](https://pip.pypa.io/en/stable/) installed.
