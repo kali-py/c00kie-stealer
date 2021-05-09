@@ -15,10 +15,10 @@ python3 win-installer
 For ***Linux*** and ***MacOS*** Users use the package manager [pip](https://pip.pypa.io/en/stable/) to install the requirements.
 
 ```bash
-pip3 install -r requirments.txt
+pip3 install -r requirements.txt
 ```
 
-*Note for Windows users: If the file `win-installer.py` doesnt work then you will need to install [MS Visual Studio 2015](https://www.visualstudio.com/en-us/downloads/download-visual-studio-vs.aspx) (Community Edition) with C/C++ compilers, and then install requirements using pip with the following command:* `pip3 install -r requirments.txt`
+*Note for Windows users: If the file `win-installer.py` doesnt work then you will need to install [MS Visual Studio 2015](https://www.visualstudio.com/en-us/downloads/download-visual-studio-vs.aspx) (Community Edition) with C/C++ compilers, and then install requirements using pip with the following command:* `pip3 install -r requirements.txt`
 
 ## Usage
 
